@@ -158,6 +158,8 @@ function load_generators_data!(setup::Dict, path::AbstractString, inputs_gen::Di
                        :Min_Retired_Energy_Cap_MW,     # to GW
 
                        :Start_Cost_per_MW,             # to $M/GW
+
+					   :Fixed_StorCost_per_MMBTUyr,    # to $/BBTU/yr
                       ]
 
     for column in columns_to_scale
