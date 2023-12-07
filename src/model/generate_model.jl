@@ -134,6 +134,7 @@ function generate_model(setup::Dict,inputs::Dict,OPTIMIZER::MOI.OptimizerWithAtt
 		reserves!(EP, inputs, setup)
 	end
 
+	
 	if Z > 1
 		transmission!(EP, inputs, setup)
 	end
@@ -207,7 +208,11 @@ function generate_model(setup::Dict,inputs::Dict,OPTIMIZER::MOI.OptimizerWithAtt
 	if setup["MaxCapReq"] == 1
 		maximum_capacity_requirement!(EP, inputs, setup)
 	end
-
+    
+	if setup["OnsiteGasStorage"] == 1
+		onsite_gas_storage!(EP, inputs, setup)
+	end
+	
 	## Define the objective function
 	@objective(EP,Min,EP[:eObj])
 

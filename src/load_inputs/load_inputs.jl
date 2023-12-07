@@ -61,6 +61,10 @@ function load_inputs(setup::Dict,path::AbstractString)
 	if setup["CO2Cap"] >= 1
 		load_co2_cap!(setup, path, inputs)
 	end
+    
+	if setup["OnsiteGasStorage"] == 1
+		load_generators_gas_reliability!(setup, path, inputs)
+	end
 
 	# Read in mapping of modeled periods to representative periods
 	if is_period_map_necessary(inputs) && is_period_map_exist(setup, path, inputs)
