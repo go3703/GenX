@@ -45,6 +45,12 @@ function write_outputs(EP::Model, path::AbstractString, setup::Dict, inputs::Dic
 	elapsed_time_costs = @elapsed write_costs(path, inputs, setup, EP)
 	println("Time elapsed for writing costs is")
 	println(elapsed_time_costs)
+
+	if setup["OnsiteGasStorage"]==1
+		dfOnsiteGasStorage = write_onsite_gas_storage(path, inputs, setup, EP)
+		println("successfully written gas storage results")
+	end
+
 	dfCap = write_capacity(path, inputs, setup, EP)
 	dfPower = write_power(path, inputs, setup, EP)
 	dfCharge = write_charge(path, inputs, setup, EP)

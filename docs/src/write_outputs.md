@@ -103,3 +103,8 @@ Pages = ["write_net_revenue.jl"]
 Modules = [GenX]
 Pages = ["write_settings.jl"]
 ```
+## Write Onsite Gas Storage 
+```@autodocs
+Modules = [GenX]
+Pages = ["write_onsite_gas_storage.jl"]
+```
