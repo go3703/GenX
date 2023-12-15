@@ -19,8 +19,8 @@ ModelingToGenerateAlternatives: 0 # Modeling to generate alternatives; 0 = not a
 ModelingtoGenerateAlternativeSlack: 0.1 # Slack value as a fraction of least-cost objective in budget constraint used for evaluating alternative model solutions; positive float value
 ModelingToGenerateAlternativeIterations: 3 # Number of MGA iterations with maximization and minimization objective
 MethodofMorris: 0 #Flag for turning on the Method of Morris analysis
-OnsiteGasStorage: 0 #Apply on-site gas storage to model; 0 = not active; 1 = active
-CNGStorage: 1 #Apply within OnsiteGasStorage module to specify type of on-site fuel storage employed; 0 = not active; 1 = active
+OnsiteGasStorage: 1 #Apply on-site gas storage to model; 0 = not active; 1 = active
+CNGStorage: 0 #Apply within OnsiteGasStorage module to specify type of on-site fuel storage employed; 0 = not active; 1 = active
 OilStorage: 0 #Apply within OnsiteGasStorage module to specify type of on-site fuel storage employed; 0 = not active; 1 = active
-HydrogenStorage: 0 #Apply within OnsiteGasStorage module to specify type of on-site fuel storage employed; 0 = not active; 1 = active
+HydrogenStorage: 1 #Apply within OnsiteGasStorage module to specify type of on-site fuel storage employed; 0 = not active; 1 = active
 
